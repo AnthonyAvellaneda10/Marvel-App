@@ -1,1 +1,185 @@
 /* You can add global styles to this file, and also import other style files */
+@charset "UTF-8";
+/* ========== Google Fonts =========== */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
+/* ========== CSS Variables =========== */
+:root {
+  --primary-color: #0c7171;
+  --default-color: #4f5665;
+  --black-color: #000;
+  --grey-color: #f0f0f0;
+  --white-color: #fff;
+  --white-color-2: #fff;
+  --white-color-3: #fff;
+  --lightpink: #ffcce0;
+  --blue: #1a1aff;
+  --custom: #1a1aff;
+  --color: #4d4d4d;
+  --lightblue: #ccccff;
+  --box-shadow-1: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --box-shadow-2: 0 5px 15px rgba(255, 94, 58, 0.2);
+  --gradient: linear-gradient(to bottom, #fccb90, #ff9a9e);
+  --gradient-marvel: linear-gradient(60deg, #fccb90, #00BCD4);
+  --btn-gradient: linear-gradient(to bottom, #ff5151 50%, #ff5e3a);
+  --title-color: hsl(207, 4%, 16%);
+  --z-tooltip: 10;
+  --text-color-light: hsl(207, 4%, 56%);
+  --pagination: hsl(207, 4%, 95%);
+  --container-color: hsl(207, 4%, 12%);
+  --body-color: hsl(207, 4%, 99%);
+  --box-shadow-1: 0 4px 20px hsla(207, 24%, 35%, .1);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+.logo img {
+  width: 120px;
+  height: 80px;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--black-color);
+    background-color: var(--white-color);
+  }
+  
+h1,
+h2,
+h3,
+h4 {
+    color: var(--black-color);
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style-type: none;
+}
+
+section {
+    padding: 5rem 0 5rem;
+    overflow: hidden;
+    padding-top: 25rem;
+}
+
+p {
+    line-height: 3rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*========== Variables Dark theme ==========*/
+body.dark-theme {
+  --black-color: hsl(207, 4%, 95%);
+  --white-color: hsl(207, 4%, 10%);
+  --white-color-3: #13588de8;
+  --pagination: #FFFFFF;
+  --title-color: hsl(207, 4%, 95%);
+  --body-color: hsl(207, 4%, 10%);
+  --box-shadow-1: 0 6px 24px hsla(207, 24%, 8%, .6)
+}
+
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar{
+    width: 9px;
+    border-radius: 7px;
+    background-color: hsl(207, 4%, 75%);
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background-color: hsl(207, 4%, 65%);
+    border-radius: 7px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover{
+    background-color: hsl(207, 4%, 55%);
+  }
+  
+  .dark-theme::-webkit-scrollbar{
+    background-color: hsl(207, 4%, 15%);
+  }
+  
+  .dark-theme::-webkit-scrollbar-thumb{
+    background-color: hsl(207, 4%, 25%);
+  }
+  
+  .dark-theme::-webkit-scrollbar-thumb:hover{
+    background-color: hsl(207, 4%, 35%);
+  }
+  
+  .dark-theme .nav, .dark-theme .nav__menu, .dark-theme .scrollup {
+    background-color: var(--container-color);
+    box-shadow: 0 4px 20px hsla(207, 24%, 8%, .4);
+  }
+
+  .dark-theme .bg-header{
+    box-shadow: 0 6px 24px hsla(207, 24%, 8%, .6);
+    background-color: var(--white-color);
+  }
+  
+  
+  
+  
+  /* ========== Custom Classes =========== */
+  .container {
+    max-width: 120rem;
+    padding: 0 3rem;
+    margin: auto;
+  }
+  
+  @media (min-width: 1600px) {
+    .container {
+      max-width: 160rem;
+    }
+  }
+  @media (max-width: 567px) {
+    .container {
+      padding: 0 1rem;
+    }
+    #pagination {
+      flex-direction: column;
+    }
+  }
+  .d-flex {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 120px;
+    height: 36px;
+  }
+  
+  .change-theme{
+    color: var(--black-color);
+    cursor: pointer;
+    transition: color .3s;
+  }
+  .change-theme:hover{
+    color: var(--primary-color);
+  }

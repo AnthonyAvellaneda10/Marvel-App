@@ -1,0 +1,24 @@
+/*=============== SCROLL UP ===============*/
+.scrollup{
+    position: fixed;
+    right: 48px;
+    bottom: -30%;
+    background-color: var(--body-color);
+    box-shadow: 0 4px 12px hsl(207, 24%, 35%, .15);
+    display: inline-flex;
+    padding: .35rem;
+    border-radius: .25rem;
+    font-size: 17.6px;
+    color: var(--title-color);
+    z-index: var(--z-tooltip);
+    transition: bottom .3s, transform .3s;
+  }
+  
+  .scrollup:hover{
+    transform: translateY(-.25rem);
+  }
+  
+  /* Show Scroll Up*/
+  .show-scroll{
+    bottom: 7.5rem;
+  }
